@@ -26,13 +26,7 @@ public class HomeController {
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
 
-	public String index()
-
-	{
-		return "login";
-	}
 
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
 
@@ -108,7 +102,7 @@ public class HomeController {
 		return new ModelAndView("productSearch", "products", products);
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 
 	private ModelAndView login()
 
